@@ -121,9 +121,12 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array , number){ // I need a array to input and a number to get the flavor at a certain index
+  return array[number] // how we get the flavor at this index
+
 }
+
+console.log(getFlavorByIndex(originalFlavors , 14)) // in the array of my choice return the item at the index thst I chose with a number like (3)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -138,11 +141,16 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array , flavor ){
+  for (let i = 0; i < array.length; i++){ //cycles though the entire array
+    if(array[i] === flavor ){ // if array item = flavor make thing happen
+    array.splice(i , 1); //delete the one item
+    }
+  }
+  return array;
 }
 
-
+console.log(removeFlavorByName(originalFlavors , 'Peach'));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -160,9 +168,18 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array , flavor ){
+  let filteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] .includes(flavor))
+    { filteredArray.push(array[i]); }
+  
+
 }
+return filteredArray;
+}
+
+console.log(filterByWord(originalFlavors , 'Vanilla'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
